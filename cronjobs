@@ -1,0 +1,85 @@
+
+# backdrop-ga-collector
+
+#0 4 * * *,config/pay_legalisation_drop_off_journey.json,config/credentials.json
+#1 4 * * *,config/pay_legalisation_post_journey.json,config/credentials.json
+#2 4 * * *,config/pay_register_birth_abroad_journey.json,config/credentials.json
+#3 4 * * *,config/pay_register_death_abroad_journey.json,config/credentials.json
+#4 4 * * *,config/carers_allowance_journey.json,config/credentials.json
+#5 4 * * *,config/student_finance_journey.json,config/credentials.json
+#6 4 * * *,config/lasting_power_of_attorney.json,config/credentials.json
+#7 4 * * *,config/licensing_overview_journey.json,config/credentials.json
+#3 10 * * *,config/pay_foreign_marriage_certificates_journey.json,config/credentials.json
+#4 10 * * *,config/insidegov-visitors.json,config/credentials.json
+#5 10 * * *,config/govuk_browsers.json,config/credentials.json
+#6 10 * * *,config/govuk_devices.json,config/credentials.json
+#7 10 * * *,config/govuk_visitors.json,config/credentials.json
+#8 10 * * *,config/student_finance_site_traffic.json,config/credentials.json
+#9 10 * * *,config/student_finance_device_usage.json,config/credentials.json
+#10 10 * * *,config/student_finance_browser_usage.json,config/credentials.json
+11 10 * * *,queries/gov-uk-content/devices-count.json,services/ga.json
+#12 10 * * *,config/gov_uk_content_pageviews_count.json,config/credentials.json
+#13 10 * * *,config/gov_uk_content_traffic_count.json,config/credentials.json
+#14 10 * * *,config/gov_uk_content_new_returning_count.json,config/credentials.json
+#15 10 * * *,config/gov_uk_content_organic_rate.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#16 10 * * *,config/gov_uk_content_referrers_rate.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+17 10 * * *,queries/gov-uk-content/social-rate.json,services/ga.json
+#18 10 * * *,config/gov_uk_content_top_collections_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#19 10 * * *,config/gov_uk_content_top_consultations_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#20 10 * * *,config/gov_uk_content_top_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#21 10 * * *,config/gov_uk_content_top_detail_guide_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#22 10 * * *,config/gov_uk_content_top_news_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#23 10 * * *,config/gov_uk_content_top_policy_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#24 10 * * *,config/gov_uk_content_top_publications_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+#25 10 * * *,config/gov_uk_content_top_speeches_count.json,config/credentials.json,scripts/collect-content-dashboard-table.py
+5 11 * * *,queries/govuk/most_viewed.json,services/ga.json
+#6 11 * * *,config/gov_uk_most_viewed_news.json,config/credentials.json
+#7 11 * * *,config/gov_uk_most_viewed_policies.json,config/credentials.json
+#8 11 * * *,config/view_driving_record_digital_transactions.json,config/credentials.json
+
+
+
+# backdrop-ga-realtime-collector
+
+0-59/2 * * * *,queries/govuk/realtime.json,services/ga-realtime.json
+#0-59/2 * * * *,queries/licensing_query.json,config/credentials.json
+#0-59/2 * * * *,queries/pay_foreign_marriage_certificates.json,config/credentials.json
+#0-59/2 * * * *,queries/pay_legalisation_drop_off.json,config/credentials.json
+#0-59/2 * * * *,queries/waste_carriers_registration.json,config/credentials.json
+#1-59/2 * * * *,queries/pay_legalisation_post.json,config/credentials.json
+#1-59/2 * * * *,queries/pay_register_birth_abroad.json,config/credentials.json
+#1-59/2 * * * *,queries/pay_register_death_abroad.json,config/credentials.json
+#1-59/2 * * * *,queries/sorn_realtime.json,config/credentials.json
+#1-59/2 * * * *,queries/tax_disc_realtime.json,config/credentials.json
+#1-59/2 * * * *,queries/carers_allowance.json,config/credentials.json
+#1-59/2 * * * *,queries/view_driving_record_realtime.json,config/credentials.json
+
+
+
+# backdrop-ga-trending-collector
+
+1 10 * * *,config/govuk/trending.json,services/ga.json
+
+
+# backdrop-pingdom-collector
+
+#2 * * * *,queries/licence_finder.json,config/pp-credentials.json
+#3 * * * *,queries/licensing.json,config/pp-credentials.json
+#4 * * * *,queries/pay_foreign_marriage_certificates.json,config/pp-credentials.json
+#5 * * * *,queries/pay_legalisation_drop_off.json,config/pp-credentials.json
+#6 * * * *,queries/pay_legalisation_post.json,config/pp-credentials.json
+#7 * * * *,queries/pay_register_birth_abroad.json,config/pp-credentials.json
+#8 * * * *,queries/pay_register_death_abroad.json,config/pp-credentials.json
+#9 * * * *,queries/lpa.json,config/pp-credentials.json
+#10 * * * *,queries/electronic_vehicle_licensing_sorn.json,config/pp-credentials.json
+#11 * * * *,queries/electronic_vehicle_licensing_tax.json,config/pp-credentials.json
+#12 * * * *,queries/carers_allowance.json,config/pp-credentials.json
+#13 * * * *,queries/waste_carriers_registration.json,config/pp-credentials.json
+14 * * * *,queries/govuk/uptime.json,services/pingdom.json
+#15 * * * *,queries/govuk_business_finance_support_search.json,config/pp-credentials.json
+#16 * * * *,queries/govuk_licence_finder.json,config/pp-credentials.json
+#17 * * * *,queries/govuk_publications.json,config/pp-credentials.json
+#18 * * * *,queries/govuk_search.json,config/pp-credentials.json
+#19 * * * *,queries/student_finance_england_fulltime_higher_education.json,config/pp-credentials.json
+#20 * * * *,queries/solihull_missed_waste_collection.json,config/pp-credentials.json
+#21 * * * *,queries/dvla_view_driving_record.json,config/pp-credentials.json

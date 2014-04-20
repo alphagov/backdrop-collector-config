@@ -1,0 +1,10 @@
+{
+  "backdrop": {
+    "url": "http://www.perfplat.dev/data",
+    "token": "foo"
+  },
+  "credentials": {
+    "CLIENT_SECRETS": "./client_secrets.json",
+    "STORAGE_PATH": "./storage.db"
+  }
+}

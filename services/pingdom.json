@@ -1,0 +1,11 @@
+{
+  "backdrop": {
+    "url": "http://www.perfplat.dev/data",
+    "token": "foo"
+  },
+  "credentials": {
+    "user": "email_address_supplied_to_pingdom",
+    "password": "pingdom_password",
+    "app_key": "app key created for app being monitored on Pingdom api"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "entrypoint": "backdrop.collector.ga.realtime",
+  "data-set": {
+    "data-group": "govuk",
+    "data-type": "realtime"
+  },
+  "query": {
+    "ids": "ga:74313105",
+    "metrics": "ga:activeVisitors"
+  },
+  "options": {
+  }
+}

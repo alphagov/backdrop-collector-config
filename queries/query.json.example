@@ -1,0 +1,11 @@
+{
+  "entrypoint": "backdrop.collector.ga",
+  "data-set": {
+    "data-group": "group",
+    "data-type": "type"
+  },
+  "query": {
+  },
+  "options": {
+  }
+}

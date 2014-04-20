@@ -1,0 +1,12 @@
+{
+  "entrypoint": "backdrop.collector.pingdom",
+  "data-set": {
+    "data-group": "govuk",
+    "data-type": "monitoring"
+  },
+  "query": {
+    "name": "govuk"
+  },
+  "options": {
+  }
+}
