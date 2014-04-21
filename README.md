@@ -1,2 +1,0 @@
-# Backdrop Collector Config
-
