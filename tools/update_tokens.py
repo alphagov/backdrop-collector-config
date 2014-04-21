@@ -21,7 +21,7 @@ def generate_sql_statement(query, env_config, service):
 
 def main():
     if len(sys.argv) != 2:
-        print 'Usage: python update_token.py [environment_app_config]'
+        print 'Usage: python tools/update_token.py [environment_app_config]'
         return
 
     env_config = sys.argv[1]

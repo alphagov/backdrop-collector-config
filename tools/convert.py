@@ -116,7 +116,7 @@ def save(query):
 
 def main():
     if len(sys.argv) != 3:
-        print 'Usage: python convert.py [data_set_mapping] [path_to_queries]'
+        print 'Usage: python tools/convert.py [data_set_mapping] [path_to_queries]'
         return
 
     data_set_mapping = read_json(sys.argv[1])
