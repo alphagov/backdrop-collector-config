@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "student-finance", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "student_finance_england_fulltime_highereducation"
+  }
+}

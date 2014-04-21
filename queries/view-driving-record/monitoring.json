@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "view-driving-record", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "dvla_view_driving_record"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "lasting-power-of-attorney", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "lpa"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "waste-carriers-registration", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "waste_carriers_registration"
+  }
+}

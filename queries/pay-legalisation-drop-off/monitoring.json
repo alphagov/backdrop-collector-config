@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "pay-legalisation-drop-off", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "pay_legalisation_drop_off"
+  }
+}

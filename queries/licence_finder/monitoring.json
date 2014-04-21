@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "licence_finder", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "licence_finder"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "data-set": {
+    "data-group": "solihull-local-authority", 
+    "data-type": "monitoring"
+  }, 
+  "entrypoint": "backdrop.collector.pingdom", 
+  "options": {}, 
+  "query": {
+    "name": "solihull_missed_waste_collection"
+  }
+}
