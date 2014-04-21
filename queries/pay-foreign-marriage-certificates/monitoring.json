@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "pay_foreign_marriage_certificates"
-  }
+  }, 
+  "token": "pingdom"
 }

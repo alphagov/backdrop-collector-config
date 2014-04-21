@@ -1,21 +1,33 @@
 {
-  "entrypoint": "backdrop.collector.ga",
   "data-set": {
-    "data-group": "gov-uk-content",
+    "data-group": "gov-uk-content", 
     "data-type": "devices-count"
-  },
-  "query": {
-    "id": "ga:74473500",
-    "metrics": ["pageviews"],
-    "dimensions": ["deviceCategory", "customVarValue9"],
-    "filters": ["customVarValue9=~^<D(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)>"]
-  },
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
   "options": {
     "plugins": [
-      "ComputeDepartmentKey('customVarValue9')",
-      "RemoveKey('customVarValue9', '_id', 'humanId')",
-      "AggregateKey(aggregate_count('pageviews'))",
+      "ComputeDepartmentKey('customVarValue9')", 
+      "RemoveKey('customVarValue9', '_id', 'humanId')", 
+      "AggregateKey(aggregate_count('pageviews'))", 
       "ComputeIdFrom('_timestamp', 'timeSpan', 'dataType', 'department', 'deviceCategory')"
     ]
-  }
+  }, 
+  "query": {
+    "dimensions": [
+      "deviceCategory", 
+      "customVarValue9"
+    ], 
+    "filters": [
+      "customVarValue9=~^(<D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|D17|D18|D19|D23|D24|D25|EA74|EA75|EA79|OT532|OT537>)"
+    ], 
+    "id": "ga:74473500", 
+    "maxResults": 0, 
+    "metrics": [
+      "pageviews"
+    ], 
+    "sort": [
+      "deviceCategory"
+    ]
+  }, 
+  "token": "ga"
 }

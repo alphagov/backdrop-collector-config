@@ -108,5 +108,6 @@
     "sort": [
       "-uniquePageviews"
     ]
-  }
+  }, 
+  "token": "ga-content"
 }

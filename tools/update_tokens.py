@@ -4,13 +4,13 @@ import os
 import sys
 
 
-def generate_sql_statement(query, env_config, service):
+def generate_sql_statement(query, env_config, token_path):
     with open(query) as query_fd:
         query_json = json.load(query_fd)
-    with open(os.path.join(env_config, service)) as service_fd:
-        service_json = json.load(service_fd)
+    with open(os.path.join(env_config, token_path)) as token_fd:
+        token_json = json.load(token_fd)
 
-    token = service_json['backdrop']['token']
+    token = token_json['token']
     data_group = query_json['data-set']['data-group']
     data_type = query_json['data-set']['data-type']
 
@@ -30,10 +30,10 @@ def main():
     with open('./cronjobs') as cronjobs:
         for cronjob in cronjobs:
             parts = cronjob.strip().split(',')
-            if len(parts) == 3:
+            if len(parts) == 5:
                 query = parts[1]
-                service = parts[2]
-                print generate_sql_statement(query, env_config, service)
+                token = parts[3]
+                print generate_sql_statement(query, env_config, token)
     print 'COMMIT;'
 
 

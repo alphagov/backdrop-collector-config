@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "waste_carriers_registration"
-  }
+  }, 
+  "token": "pingdom"
 }

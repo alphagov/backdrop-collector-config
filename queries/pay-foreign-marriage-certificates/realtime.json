@@ -9,5 +9,6 @@
     "filters": "ga:pagePath=~/pay-foreign-marriage-certificates", 
     "ids": "ga:84779739", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

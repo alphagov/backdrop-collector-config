@@ -16,5 +16,6 @@
     "metrics": [
       "uniqueEvents"
     ]
-  }
+  }, 
+  "token": "ga"
 }

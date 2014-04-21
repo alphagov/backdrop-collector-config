@@ -54,6 +54,7 @@ def convert(query_json, data_set_mapping):
         print 'It is a Pingdom query'
         new_query = {
             'entrypoint': 'backdrop.collector.pingdom',
+            'token': 'pingdom',
             'data-set': data_set_mapping[query_json['bucket']],
             'query': {
                 'name': query_json['check_name'],
@@ -65,6 +66,7 @@ def convert(query_json, data_set_mapping):
         new_query = {
             'query': query_json['query'],
             'entrypoint': 'backdrop.collector.ga.realtime',
+            'token': 'ga-realtime',
             'data-set': data_set_mapping[query_json['target']],
             'options': {},
         }
@@ -83,13 +85,16 @@ def convert(query_json, data_set_mapping):
         if is_ga_trending(query_json):
             print 'It is a GA Trending query'
             new_query['entrypoint'] = 'backdrop.collector.ga.trending'
+            new_query['token'] = 'ga-trending'
         elif is_ga_content(query_json):
             print 'It is a GA Content query'
             new_query['entrypoint'] = \
                 'backdrop.collector.ga.contrib.content.table'
+            new_query['token'] = 'ga-content'
         else:
             print 'It is a GA query'
             new_query['entrypoint'] = 'backdrop.collector.ga'
+            new_query['token'] = 'ga'
 
         new_query['options'] = \
             {k: query_json[k] for k in
@@ -103,15 +108,12 @@ def save(query):
     path = '{0}/{1}.json'.format(data_group_path,
                                  query['data-set']['data-type'])
 
-    if isfile(path):
-        print 'Converted query already exists at {0}'.format(path)
-    else:
-        if not exists(data_group_path):
-            makedirs(data_group_path)
+    if not exists(data_group_path):
+        makedirs(data_group_path)
 
-        with open(path, 'w') as new_query_fd:
-            json.dump(query, new_query_fd, sort_keys=True, indent=2)
-            print 'Saved converted query to {0}'.format(path)
+    with open(path, 'w') as new_query_fd:
+        json.dump(query, new_query_fd, sort_keys=True, indent=2)
+        print 'Saved converted query to {0}'.format(path)
 
 
 def main():

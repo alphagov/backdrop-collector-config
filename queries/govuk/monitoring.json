@@ -6,6 +6,7 @@
   "entrypoint": "backdrop.collector.pingdom", 
   "options": {}, 
   "query": {
-    "name": "govuk"
-  }
+    "name": "govuk_search"
+  }, 
+  "token": "pingdom"
 }

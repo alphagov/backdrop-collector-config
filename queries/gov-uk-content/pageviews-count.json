@@ -23,5 +23,6 @@
     "metrics": [
       "pageviews"
     ]
-  }
+  }, 
+  "token": "ga"
 }

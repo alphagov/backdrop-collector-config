@@ -5,23 +5,23 @@ import os
 
 entrypoint_information = {
     'backdrop.collector.ga': {
-        'service': 'services/ga.json',
+        'credentials': 'credentials/ga.json',
         'repeat': 'daily',
     },
     'backdrop.collector.ga.trending': {
-        'service': 'services/ga.json',
+        'credentials': 'credentials/ga.json',
         'repeat': 'daily',
     },
     'backdrop.collector.ga.contrib.content.table': {
-        'service': 'services/ga.json',
+        'credentials': 'credentials/ga.json',
         'repeat': 'daily',
     },
     'backdrop.collector.ga.realtime': {
-        'service': 'services/ga-realtime.json',
+        'credentials': 'credentials/ga.json',
         'repeat': '2minute',
     },
     'backdrop.collector.pingdom': {
-        'service': 'services/pingdom.json',
+        'credentials': 'credentials/pingdom.json',
         'repeat': 'hourly',
     },
 }
@@ -29,24 +29,24 @@ entrypoint_information = {
 
 def daily(jobs):
     entries = ['#', '# Daily jobs', '#', '']
-    for index, (query, service) in enumerate(jobs):
+    for index, (query, credentials, token) in enumerate(jobs):
         hour, minute = divmod(index, 60)
-        entries.append('{0} {1} * * *,{2},{3}'.format(minute, hour, query, service))
+        entries.append('{0} {1} * * *,{2},{3},{4},backdrop.json'.format(minute, hour, query, credentials, token))
     return entries
 
 
 def hourly(jobs):
     entries = ['#', '# Hourly jobs', '#', '']
-    for index, (query, service) in enumerate(jobs):
+    for index, (query, credentials, token) in enumerate(jobs):
         minute = index % 60
-        entries.append('{0} * * * *,{1},{2}'.format(minute, query, service))
+        entries.append('{0} * * * *,{1},{2},{3},backdrop.json'.format(minute, query, credentials, token))
     return entries
 
 
 def two_minute(jobs):
     entries = ['#', '# Run every two minutes', '#', '']
-    for index, (query, service) in enumerate(jobs):
-        entries.append('1-59/2 * * * *,{0},{1}'.format(query, service))
+    for index, (query, credentials, token) in enumerate(jobs):
+        entries.append('1-59/2 * * * *,{0},{1},{2},backdrop.json'.format(query, credentials, token))
     return entries
 
 
@@ -56,7 +56,9 @@ def main():
 
     for query in queries:
         with open(query) as query_fd:
-            entrypoint = json.load(query_fd)['entrypoint']
+            query_json = json.load(query_fd)
+            entrypoint = query_json['entrypoint']
+            token_file = "tokens/{0}.json".format(query_json['token'])
 
         query_info = entrypoint_information.get(entrypoint, None)
 
@@ -66,7 +68,7 @@ def main():
             if query_info['repeat'] not in time_buckets:
                 time_buckets[query_info['repeat']] = []
 
-            time_buckets[query_info['repeat']].append((query, query_info['service']))
+            time_buckets[query_info['repeat']].append((query, query_info['credentials'], token_file))
 
     daily_jobs = daily(time_buckets['daily'])
     hourly_jobs = hourly(time_buckets['hourly'])
@@ -80,8 +82,6 @@ def main():
     ] + spacer + daily_jobs + spacer + hourly_jobs + spacer + two_minute_jobs
 
     print '\n'.join(cronjobs_content)
-
-
 
 
 if __name__ == '__main__':

@@ -9,5 +9,6 @@
     "filters": "ga:pagePath=~/pay-legalisation-post", 
     "ids": "ga:84775792", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

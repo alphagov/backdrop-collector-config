@@ -9,5 +9,6 @@
     "filters": "ga:pagePath=~/pay-legalisation-drop-off", 
     "ids": "ga:84775792", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

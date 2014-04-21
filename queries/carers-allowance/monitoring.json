@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "carers_allowance"
-  }
+  }, 
+  "token": "pingdom"
 }

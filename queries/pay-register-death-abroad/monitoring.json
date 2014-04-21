@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "pay_register_death_abroad"
-  }
+  }, 
+  "token": "pingdom"
 }

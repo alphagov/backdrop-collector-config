@@ -10,5 +10,6 @@
     "metrics": [
       "visitors"
     ]
-  }
+  }, 
+  "token": "ga"
 }

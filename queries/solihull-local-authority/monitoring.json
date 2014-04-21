@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "solihull_missed_waste_collection"
-  }
+  }, 
+  "token": "pingdom"
 }

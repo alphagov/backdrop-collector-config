@@ -8,5 +8,6 @@
   "query": {
     "ids": "ga:74313105", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

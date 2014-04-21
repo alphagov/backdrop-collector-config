@@ -9,5 +9,6 @@
     "filters": "ga:pagePath=~/apply-for-a-licence", 
     "ids": "ga:84779739", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

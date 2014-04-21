@@ -9,5 +9,6 @@
     "filters": "ga:pagePath=~^/tax-disc$", 
     "ids": "ga:84778268", 
     "metrics": "ga:activeVisitors"
-  }
+  }, 
+  "token": "ga-realtime"
 }

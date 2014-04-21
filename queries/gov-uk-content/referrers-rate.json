@@ -108,5 +108,6 @@
     "sort": [
       "-entrances"
     ]
-  }
+  }, 
+  "token": "ga-content"
 }

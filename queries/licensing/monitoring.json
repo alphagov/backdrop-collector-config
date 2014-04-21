@@ -7,5 +7,6 @@
   "options": {}, 
   "query": {
     "name": "licensing"
-  }
+  }, 
+  "token": "pingdom"
 }
