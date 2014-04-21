@@ -1,0 +1,22 @@
+{
+  "data-set": {
+    "data-group": "student-finance", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory", 
+      "eventAction", 
+      "eventLabel"
+    ], 
+    "filters": [
+      "eventCategory==student-finance"
+    ], 
+    "id": "ga:75709479", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}

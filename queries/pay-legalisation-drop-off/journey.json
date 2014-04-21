@@ -1,0 +1,20 @@
+{
+  "data-set": {
+    "data-group": "pay-legalisation-drop-off", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory"
+    ], 
+    "filters": [
+      "eventCategory=~^pay-legalisation-drop-off:"
+    ], 
+    "id": "ga:56580952", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}

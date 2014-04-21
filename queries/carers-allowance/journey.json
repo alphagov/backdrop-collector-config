@@ -1,0 +1,22 @@
+{
+  "data-set": {
+    "data-group": "carers-allowance", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory", 
+      "eventAction", 
+      "eventLabel"
+    ], 
+    "filters": [
+      "eventCategory==carers-allowance"
+    ], 
+    "id": "ga:75455468", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}

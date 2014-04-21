@@ -1,0 +1,17 @@
+{
+  "data-set": {
+    "data-group": "student-finance", 
+    "data-type": "device-usage"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "deviceCategory"
+    ], 
+    "id": "ga:75709479", 
+    "metrics": [
+      "visitors"
+    ]
+  }
+}

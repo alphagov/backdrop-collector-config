@@ -1,0 +1,17 @@
+{
+  "data-set": {
+    "data-group": "govuk", 
+    "data-type": "devices"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "deviceCategory"
+    ], 
+    "id": "ga:53872948", 
+    "metrics": [
+      "visitors"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data-set": {
+    "data-group": "pay-legalisation-post", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory"
+    ], 
+    "filters": [
+      "eventCategory=~^pay-legalisation-post:"
+    ], 
+    "id": "ga:56580952", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}

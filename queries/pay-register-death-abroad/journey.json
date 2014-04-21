@@ -1,0 +1,20 @@
+{
+  "data-set": {
+    "data-group": "pay-register-death-abroad", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory"
+    ], 
+    "filters": [
+      "eventCategory=~^pay-register-death-abroad:"
+    ], 
+    "id": "ga:56580952", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}

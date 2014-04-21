@@ -1,0 +1,14 @@
+{
+  "data-set": {
+    "data-group": "insidegov", 
+    "data-type": "visitors"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "id": "ga:53699180", 
+    "metrics": [
+      "visitors"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data-set": {
+    "data-group": "view-driving-record", 
+    "data-type": "digital-transactions"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "pagePath"
+    ], 
+    "filters": [
+      "pagePath=~^/driving-record/"
+    ], 
+    "id": "ga:83729847", 
+    "metrics": [
+      "visitors"
+    ]
+  }
+}

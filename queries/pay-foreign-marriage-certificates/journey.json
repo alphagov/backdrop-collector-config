@@ -1,0 +1,20 @@
+{
+  "data-set": {
+    "data-group": "pay-foreign-marriage-certificates", 
+    "data-type": "journey"
+  }, 
+  "entrypoint": "backdrop.collector.ga", 
+  "options": {}, 
+  "query": {
+    "dimensions": [
+      "eventCategory"
+    ], 
+    "filters": [
+      "eventCategory=~^pay-foreign-marriage-certificates:"
+    ], 
+    "id": "ga:56580952", 
+    "metrics": [
+      "uniqueEvents"
+    ]
+  }
+}
