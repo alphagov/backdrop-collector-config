@@ -1,0 +1,13 @@
+{
+  "data-set": {
+    "data-group": "pay-register-birth-abroad", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "filters": "ga:pagePath=~/pay-register-birth-abroad", 
+    "ids": "ga:84775377", 
+    "metrics": "ga:activeVisitors"
+  }
+}

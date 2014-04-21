@@ -1,0 +1,13 @@
+{
+  "data-set": {
+    "data-group": "tax-disc", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "filters": "ga:pagePath=~^/tax-disc$", 
+    "ids": "ga:84778268", 
+    "metrics": "ga:activeVisitors"
+  }
+}

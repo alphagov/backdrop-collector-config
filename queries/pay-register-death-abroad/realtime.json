@@ -1,0 +1,13 @@
+{
+  "data-set": {
+    "data-group": "pay-register-death-abroad", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "filters": "ga:pagePath=~/pay-register-death-abroad", 
+    "ids": "ga:84775377", 
+    "metrics": "ga:activeVisitors"
+  }
+}

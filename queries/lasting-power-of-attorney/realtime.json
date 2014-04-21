@@ -1,0 +1,12 @@
+{
+  "data-set": {
+    "data-group": "lasting-power-of-attorney", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "ids": "ga:33184303", 
+    "metrics": "ga:activeVisitors"
+  }
+}

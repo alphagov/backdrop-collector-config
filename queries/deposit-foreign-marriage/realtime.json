@@ -1,0 +1,13 @@
+{
+  "data-set": {
+    "data-group": "deposit-foreign-marriage", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "filters": "ga:pagePath=~/deposit-foreign-marriage", 
+    "ids": "ga:74313105", 
+    "metrics": "ga:activeVisitors"
+  }
+}

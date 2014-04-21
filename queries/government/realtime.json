@@ -1,0 +1,12 @@
+{
+  "data-set": {
+    "data-group": "government", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "ids": "ga:74313105", 
+    "metrics": "ga:activeVisitors"
+  }
+}

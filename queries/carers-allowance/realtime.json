@@ -1,0 +1,12 @@
+{
+  "data-set": {
+    "data-group": "carers-allowance", 
+    "data-type": "realtime"
+  }, 
+  "entrypoint": "backdrop.collector.ga.realtime", 
+  "options": {}, 
+  "query": {
+    "ids": "ga:78169243", 
+    "metrics": "ga:activeVisitors"
+  }
+}
