@@ -52,7 +52,7 @@ def two_minute(jobs):
 
 def main():
     queries = [os.path.join(dp, f) for dp, dn, filenames in os.walk('queries') for f in filenames if os.path.splitext(f)[1] == '.json']
-    time_buckets = {}
+    time_data_sets = {}
 
     for query in queries:
         with open(query) as query_fd:
@@ -65,14 +65,14 @@ def main():
         if query_info is None:
             print "No entrypoint {0} from {1}".format(entrypoint, query)
         else:
-            if query_info['repeat'] not in time_buckets:
-                time_buckets[query_info['repeat']] = []
+            if query_info['repeat'] not in time_data_sets:
+                time_data_sets[query_info['repeat']] = []
 
-            time_buckets[query_info['repeat']].append((query, query_info['credentials'], token_file))
+            time_data_sets[query_info['repeat']].append((query, query_info['credentials'], token_file))
 
-    daily_jobs = daily(time_buckets['daily'])
-    hourly_jobs = hourly(time_buckets['hourly'])
-    two_minute_jobs = two_minute(time_buckets['2minute'])
+    daily_jobs = daily(time_data_sets['daily'])
+    hourly_jobs = hourly(time_data_sets['hourly'])
+    two_minute_jobs = two_minute(time_data_sets['2minute'])
 
     spacer = ['', '']
     cronjobs_content = [
