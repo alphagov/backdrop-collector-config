@@ -55,7 +55,7 @@ def convert(query_json, data_set_mapping):
         new_query = {
             'entrypoint': 'backdrop.collector.pingdom',
             'token': 'pingdom',
-            'data-set': data_set_mapping[query_json['bucket']],
+            'data-set': data_set_mapping[query_json['data_set']],
             'query': {
                 'name': query_json['check_name'],
             },
